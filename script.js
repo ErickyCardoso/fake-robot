@@ -10,7 +10,8 @@ document.addEventListener("DOMContentLoaded", function() {
             "boa tarde": "Boa tarde, como vais? Como posso ajuda-lo?",
             "good afternoon": "Good Afternoon, I'm JHINFERENT'AI, how can I help you?",
             "boa noite": "Boa noite, eu sou o JHINFERENT'AI, como posso ajuda-lo?",
-            "boa madrugada": "Que escuridão... Como posso ajuda-lo?",
+            "good evening": "Good Evening, I'm JHINFERENT'AI, how can I help you?",
+            "boa madrugada": "Que escuridão... Como posso ajuda-lo?"
         };
         let input = (prompt("DIGITE:")).toLowerCase();
         document.getElementById("textoin").textContent = input;
