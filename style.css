@@ -1,5 +1,23 @@
 body {
- background-color: black;
+     background-color: rgb(88, 88, 88);
+} 
+.container {
+     display: flex;
+     flex-direction: row;
+}
+.input {
+     margin-top: 40%;
+     margin-left: 10%;
+     margin-right: 10%;
+     width: 1040px;
+     height: 20px;
+     font-family: 'Poppins', sans-serif;
+     font-size: 17px;
+     border: 2px solid rgb(0, 4, 255);
+     border-radius: 100px;
+     background-color: rgb(54, 54, 54);
+     color: rgb(255, 255, 255);
+     resize: none;
 }
 #textoin {
  color: blue;
