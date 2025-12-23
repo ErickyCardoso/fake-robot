@@ -13,15 +13,24 @@ document.addEventListener("DOMContentLoaded", function() {
             "good evening": "Good Evening, I'm JHINFERENT'AI, how can I help you?",
             "boa madrugada": "Que escuridão... Como posso ajuda-lo?"
         };
-        let input = (prompt("DIGITE:")).toLowerCase();
-        document.getElementById("textoin").textContent = input;
-        function resposta () {
-            if (input in dados) {
-                console.log(dados[input]);
-                document.getElementById("textoia").textContent = (dados[input]);
-            } else {
-                console.log("Mil perdões, mas não consigo te ajudar com isso. Digite 'ajuda' para saber mais."); 
-            }
+        //let input = (prompt("DIGITE:")).toLowerCase();
+        //document.getElementById("textoin").textContent = input;
+        //function resposta () {
+        //    if (input in dados) {
+        //        console.log(dados[input]);
+        //        document.getElementById("textoia").textContent = (dados[input]);
+        //    } else {
+        //        console.log("Mil perdões, mas não consigo te ajudar com isso. Digite 'ajuda' para saber mais."); 
+        //   }
+        //}
+        // resposta();
+     const textarea = document.querySelector('textarea');
+     textarea.addEventListener('input', () => {
+        if (textarea.value === '') {
+            textarea.style.height = '25px';
+        } else {
+            textarea.style.height = 'auto';
+            textarea.style.height = textarea.scrollHeight + 'px';
         }
-        resposta();
+    });
 });
