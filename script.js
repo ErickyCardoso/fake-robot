@@ -22,16 +22,23 @@ document.addEventListener("DOMContentLoaded", function() {
             msg.textContent = dados[input];
             msg.classList.add('msg');
             containeria.appendChild(msg);
+            window.scrollTo(0, document.body.scrollHeight);
         } else {
             const msg = document.createElement('div');
             msg.textContent = ("Mil perdões, mas não consigo te ajudar com isso. Digite 'ajuda' para saber mais.");
             msg.classList.add('msg');
             containeria.appendChild(msg);
+            window.scrollTo(0, document.body.scrollHeight);
         }
     } 
-    document.addEventListener("keydown", function(event) {
-        if (event.key === 'Enter') {
-            input = textarea.value.toLowerCase().trim();
+    textarea.addEventListener("keydown", function(event) {
+        if (event.key === 'Enter' && textarea.value.trim() !== '') {
+            const msgin = document.createElement('div');
+            msgin.textContent = textarea.value;
+            msgin.classList.add('msgin');
+            containeria.appendChild(msgin);
+            window.scrollTo(0, document.body.scrollHeight);
+            input = textarea.value.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "").trim();
             textarea.value = '';
             event.preventDefault();
             textarea.style.height = '25px';

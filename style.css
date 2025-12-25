@@ -1,12 +1,16 @@
 body {
      background-color: rgb(41, 41, 41);
+     scroll-behavior: smooth;
 }
 .container {
      display: flex;
      flex-direction: row;
+     position: fixed;
+     left: 10%;
+     right: 10%;
+     bottom: 20px;
 }
 .input {
-     margin-top: 40%;
      margin-left: 10%;
      margin-right: 10%;
      width: 1040px;
@@ -22,16 +26,29 @@ body {
      color: rgb(0, 255, 76);
      resize: none;
 }
-.container-ia, .container-usu {
+.container-ia {
      display: flex;
+     position: relative;
      flex-direction: column;
      gap: 5px;
      overflow-y: auto;
+     scroll-behavior: smooth;
+     margin-left: 50px;
+     margin-right: 50px;
+     margin-bottom: 100px;
 }
 .msg {
      border-radius: 100px;
      background-color: rgb(48, 22, 22);
      color: rgb(255, 38, 0);
+     font-family: 'Poppins', sans-serif;
+     padding: 10px;
+     margin: 5px;
+}
+.msgin {
+     border-radius: 100px;
+     background-color: rgb(23, 67, 78);
+     color: rgb(255, 255, 255);
      font-family: 'Poppins', sans-serif;
      padding: 10px;
      margin: 5px;
